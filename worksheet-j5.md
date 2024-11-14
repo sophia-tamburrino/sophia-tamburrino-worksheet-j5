@@ -49,11 +49,37 @@ public class HelloGoodbyeEx2 {
 ```
 ## #5 - Convert the ActionListeners to Lambda Functions.
 ```Java
+public class RedPillBluePill extends JFrame {
+    JLabel label;
 
+    public RedPillBluePill() {
+        this.setSize(300, 300);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        JPanel panel = new JPanel(new BorderLayout());        
+        JButton red = new JButton("red");
+        JButton blue = new JButton("blue");
+        panel.add(red, BorderLayout.EAST);
+        panel.add(blue, BorderLayout.WEST);
+        label = new JLabel("click a button");
+        this.add(label, BorderLayout.NORTH);
+        this.add(panel, BorderLayout.SOUTH);
+
+        red.addActionListener((e) ->  {
+            // TODO Auto-generated method stub
+            label.setText("RED");        
+        });
+
+        blue.addActionListener((e) ->  {
+            // TODO Auto-generated method stub
+            label.setText("BLUE");
+        });
+    }
+}
 ```
 
 ## #6 - Explain why for ActionListener you can use a Lambda function but for WindowListener you cannot?
-
+WindowListener has a few methods that need to be implemented, and lambda functions can only work on functions that only need a single function implemented. 
 
 ## #7 - Write a program that allows you to enter a 6-digit PIN
 ```Java
