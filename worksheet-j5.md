@@ -83,5 +83,20 @@ WindowListener has a few methods that need to be implemented, and lambda functio
 
 ## #7 - Write a program that allows you to enter a 6-digit PIN
 ```Java
+ public static void main(final String args[]) {
+        JFrame frame = new JFrame();
+
+        JButton bOne = new JButton("1");
+        JButton bTwo = new JButton("2");
+        JButton bThree = new JButton("3");
+        JButton bFour = new JButton("4");
+        JButton bFive = new JButton("5");
+        JButton bSix = new JButton("6");
+
+        //need to arrange them so they are in order
+        //could do center, left, right
+
+        
+        
 
 ```
